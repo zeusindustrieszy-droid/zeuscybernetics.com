@@ -8,6 +8,9 @@ import {
 const Net = lazy(() => import('./Net'))
 
 const MAIL = 'contact@zeuscybernetics.com'
+// Vite's base only rewrites index.html, not string literals in JSX, so public assets
+// referenced from code must carry BASE_URL themselves to survive a Pages subpath.
+const asset = (p: string) => `${import.meta.env.BASE_URL}${p.replace(/^\.?\/+/, '')}`
 const NAV = ['mandate', 'programmes', 'scope', 'book', 'contact']
 
 const PROGRAMMES = [
@@ -34,7 +37,7 @@ function Header() {
   return (
     <div className="top">
       <a className="brand" href="#top">
-        <img src="/images/logo.jpeg" alt="ZCC"/>
+        <img src={asset('images/logo.jpeg')} alt="ZCC"/>
         <b>ZCC · Est. 1998</b>
       </a>
       <nav className={open ? 'open' : ''}>
@@ -56,7 +59,7 @@ function Header() {
 function Hero() {
   return (
     <header className="hero" id="top">
-      <img className="hero-photo" src="/images/hero-bg.jpeg" alt=""/>
+      <img className="hero-photo" src={asset('images/hero-bg.jpeg')} alt=""/>
       <Suspense fallback={null}><Net/></Suspense>
       <div className="hero-veil"/>
       <div className="hero-copy">
@@ -260,7 +263,7 @@ function Contact() {
 function Footer() {
   return (
     <footer>
-      <img src="/images/footer-logo.jpeg" alt="ZCC"/>
+      <img src={asset('images/footer-logo.jpeg')} alt="ZCC"/>
       <div className="foot">Built by <b>Zeus Cybernetics Corp</b> · Est. 1998</div>
     </footer>
   )
