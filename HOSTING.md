@@ -68,7 +68,7 @@ certificate issues.
 ## Notes
 
 - **Forms are mailto-only.** The appointment form composes a `mailto:` to
-  `contact@zeuscybernetics.com` in the browser. Nothing is posted anywhere, so the
+  your mail client addresses both house mailboxes in the browser. Nothing is posted anywhere, so the
   site works on any static host with no backend. To get submissions in a file
   instead, point the form at a form endpoint (Formspree, cPanel's Form Mailer, or a
   small Node/Express inbox like the TOTA site uses) — the handler lives in
@@ -85,7 +85,7 @@ certificate issues.
 
 ## Before go-live
 
-- [ ] Confirm `info@` and `contact@zeuscybernetics.com` both accept mail.
+- [ ] Confirm `zeusindustries.zy@gmail.com` and `dilhamjafferr@gmail.com` both accept mail.
 - [ ] Set `og:url` and the canonical URL to the live domain.
 - [ ] Load on a phone — the hero net drops to fewer nodes under 700px by design.
 
