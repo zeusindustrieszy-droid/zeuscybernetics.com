@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zeus Cybernetics Corp — The net is the theatre</title>
+<meta name="description" content="Zeus Cybernetics Corp (ZCC), Kampala. Est. 1998. Cybersecurity for the whole surface: data protection, simulation, authorised testing, debug, threat analysis, intelligence, digital infrastructure.">
+<link rel="icon" href="logo.jpeg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="wire" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="brand"><img src="logo.jpeg" alt="ZCC"><div><b data-scramble>ZCC</b><em>EST. 1998 · KAMPALA</em></div></div>
+  <nav>
+    <a href="#mandate">Mandate</a><a href="#programmes">Programmes</a><a href="#surfaces">Surfaces</a><a href="#house">The house</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <p class="kicker" data-scramble>ZEUS CYBERNETICS CORP // SIGNAL HOUSE</p>
+  <h1><span class="l">THE NET</span><span class="l">IS THE</span><span class="l gold">THEATRE.</span></h1>
+  <p class="sub">Kampala is the desk. The theatre is every reachable surface.</p>
+  <p class="catch">HOLD THE WIRE. WE MEAN IT.</p>
+  <div class="hero-meta">
+    <span>SINCE 1998</span><i>◆</i><span>7 PROGRAMMES</span><i>◆</i><span>SIGNED SCOPE ONLY</span>
+  </div>
+</section>
+
+<section id="mandate" class="mandate">
+  <h2 class="triad">
+    <span data-scramble>HOLD THE WIRE.</span>
+    <span data-scramble>BUILD THE DOOR.</span>
+    <span data-scramble class="gold">TEST THE LOCK WE FITTED.</span>
+  </h2>
+  <p class="rule"></p>
+  <div class="mand-grid">
+    <div class="m"><b>Infrastructure that stays up under load,</b><span>and a desk that watches it.</span></div>
+    <div class="m"><b>Web and app surfaces we ship ourselves —</b><span>web, mail, identity, edges.</span></div>
+    <div class="m"><b>Then we attack our own work under a signed scope.</b><span>Findings in a file.</span></div>
+  </div>
+</section>
+
+<section id="programmes" class="prog">
+  <h2 class="sec"><small>01 /</small> THE SEVEN</h2>
+  <div class="rows" id="rows"></div>
+</section>
+
+<section id="surfaces" class="surfaces">
+  <div class="ticker"><div id="tick"></div></div>
+  <p class="cap">If it is reachable on the public net, it is in the conversation. The list is the internet, not a brochure of three products.</p>
+</section>
+
+<section id="house" class="house">
+  <h2 class="sec"><small>02 /</small> THE HOUSE</h2>
+  <div class="house-grid">
+    <div class="packet">
+      <svg viewBox="0 0 600 120" aria-label="Packet travelling the wire">
+        <path id="pwire" d="M0 60 H600" class="wbase"/>
+        <path d="M0 60 H150 L180 20 H300 L330 100 H450 L480 60 H600" class="wline"/>
+        <circle r="5" class="pulse"><animateMotion dur="4s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#pwire2"/></animateMotion></circle>
+        <path id="pwire2" d="M0 60 H150 L180 20 H300 L330 100 H450 L480 60 H600" class="hidden"/>
+      </svg>
+    </div>
+    <div class="doors">
+      <a class="door" id="book" href="#"><b>Book the desk</b><span>Pick the programme. Pick a day. The form writes the mail.</span></a>
+      <a class="door" id="call" href="#"><b>Call Mr. Robot</b><span>If the file is on fire. Kampala time.</span></a>
+    </div>
+  </div>
+  <p class="close">The house is here. Book if it can wait. Call if it cannot.</p>
+</section>
+</main>
+
+<footer>
+  <span>ZCC // KAMPALA · SG · UGANDA · <b>EST. 1998</b></span>
+  <span class="sig">Digital architecture by Zeus Cybernetics Corp (ZCC)</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
