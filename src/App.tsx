@@ -8,6 +8,9 @@ import {
 const Net = lazy(() => import('./Net'))
 
 const MAIL = 'contact@zeuscybernetics.com'
+const INFO_MAIL = 'info@zeuscybernetics.com'
+// Both house mailboxes receive a booking — the desk and the info alias.
+const BOOK_TO = `${MAIL},${INFO_MAIL}`
 // Vite's base only rewrites index.html, not string literals in JSX, so public assets
 // referenced from code must carry BASE_URL themselves to survive a Pages subpath.
 const asset = (p: string) => `${import.meta.env.BASE_URL}${p.replace(/^\.?\/+/, '')}`
@@ -196,7 +199,7 @@ function Book() {
       '',
       f.note || 'No scope note supplied.',
     ].join('\n')
-    window.location.href = `mailto:${MAIL}?subject=${encodeURIComponent(`ZCC appointment — ${f.svc}`)}&body=${encodeURIComponent(body)}`
+    window.location.href = `mailto:${BOOK_TO}?subject=${encodeURIComponent(`ZCC appointment — ${f.svc}`)}&body=${encodeURIComponent(body)}`
     setSent(true)
   }
 
@@ -252,7 +255,7 @@ function Contact() {
         <div className="break r">
           <article><h3>Call Mr. Robot</h3><p><a href="tel:+256757151172">+256 757 151172</a></p></article>
           <article><h3>Desk</h3><p><a href="tel:+256730078031">+256 730 078031</a></p></article>
-          <article><h3>Mail</h3><p><a href="mailto:info@zeuscybernetics.com">info@zeuscybernetics.com</a><br/><a href={`mailto:${MAIL}`}>contact@zeuscybernetics.com</a></p></article>
+          <article><h3>Mail</h3><p><a href={`mailto:${INFO_MAIL}`}>info@zeuscybernetics.com</a><br/><a href={`mailto:${BOOK_TO}`}>contact@zeuscybernetics.com</a></p></article>
           <article><h3>Place</h3><p>Kampala, Uganda</p></article>
         </div>
       </div>
