@@ -33,7 +33,7 @@ npm run dev       # Vite at http://localhost:5175
 
 ## GitHub Pages (live target)
 
-Repo: `zcc/zcc.github.io` (public). Branch `main`. The build is **not** committed —
+Repo: `zeusindustrieszy-droid/zeuscybernetics.com` (public, live). Branch `main`. The build is **not** committed —
 `.github/workflows/deploy.yml` runs `npm ci && npm run build` on every push to `main`
 and uploads `dist/` to Pages via `actions/deploy-pages`.
 
@@ -46,25 +46,24 @@ Pages serves it at the root (`zcc.github.io`) or a subpath (`zcc.github.io/zcc/`
 Push an existing checkout:
 
 ```
-git remote add origin https://github.com/zcc/zcc.github.io.git
+git remote add origin https://github.com/zeusindustrieszy-droid/zeuscybernetics.com.git
 git push -u origin main
 ```
 
-### Custom domain later
+### Custom domain
 
-Drop a file at `public/CNAME` containing just the hostname (e.g. `zeuscybernetics.com`).
-It is copied into `dist/` on build and Pages picks it up. Then at the registrar:
+`public/CNAME` already carries `zeuscybernetics.com`, so Pages binds the domain on the
+first deploy. At the registrar, point the apex at GitHub and alias `www`:
 
 ```
 A     @     185.199.108.153   (and .109.153, .110.153, .111.153)
-CNAME www   zcc.github.io
+CNAME www   zeusindustrieszy-droid.github.io
 ```
 
-Enforce HTTPS in Settings → Pages after the certificate issues (a few minutes).
-
-If Pages serves the site from a `*.github.io` **subpath** instead of a root domain,
-skip `CNAME` entirely — it is read as a domain name, and a mismatched value breaks
-the build. Just use the URL Pages prints.
+Until DNS propagates the site is reachable at
+`https://zeusindustrieszy-droid.github.io/zeuscybernetics.com/` — `base: './'` makes
+that subpath work with no separate build. Enforce HTTPS in Settings → Pages once the
+certificate issues.
 
 ## Notes
 
