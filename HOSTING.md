@@ -31,6 +31,41 @@ npm run preview   # local check at http://localhost:4173
 npm run dev       # Vite at http://localhost:5175
 ```
 
+## GitHub Pages (live target)
+
+Repo: `zcc/zcc.github.io` (public). Branch `main`. The build is **not** committed —
+`.github/workflows/deploy.yml` runs `npm ci && npm run build` on every push to `main`
+and uploads `dist/` to Pages via `actions/deploy-pages`.
+
+In the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+That is the only manual click; everything else is on push.
+
+`base` is `'./'` in `vite.config.ts`, so the site resolves assets correctly whether
+Pages serves it at the root (`zcc.github.io`) or a subpath (`zcc.github.io/zcc/`).
+
+Push an existing checkout:
+
+```
+git remote add origin https://github.com/zcc/zcc.github.io.git
+git push -u origin main
+```
+
+### Custom domain later
+
+Drop a file at `public/CNAME` containing just the hostname (e.g. `zeuscybernetics.com`).
+It is copied into `dist/` on build and Pages picks it up. Then at the registrar:
+
+```
+A     @     185.199.108.153   (and .109.153, .110.153, .111.153)
+CNAME www   zcc.github.io
+```
+
+Enforce HTTPS in Settings → Pages after the certificate issues (a few minutes).
+
+If Pages serves the site from a `*.github.io` **subpath** instead of a root domain,
+skip `CNAME` entirely — it is read as a domain name, and a mismatched value breaks
+the build. Just use the URL Pages prints.
+
 ## Notes
 
 - **Forms are mailto-only.** The appointment form composes a `mailto:` to
