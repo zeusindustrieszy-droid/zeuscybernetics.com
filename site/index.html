@@ -36,98 +36,153 @@
 <!-- DOMAIN GO-LIVE: when zeuscybernetics.com is registered + DNS pointed to GitHub Pages,
      replace https://zeusindustrieszy-droid.github.io/zeuscybernetics.com/ with https://zeuscybernetics.com/
      in canonical, og:url, twitter:image, JSON-LD url/logo, sitemap.xml and robots.txt, then resubmit in Search Console. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="logo.jpeg">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<canvas id="wire" aria-hidden="true"></canvas>
-<div class="vignette" aria-hidden="true"></div>
+<canvas id="field" aria-hidden="true"></canvas>
+<div class="glow" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
 
-<div class="rail" aria-hidden="true"><i id="pulse"></i></div>
-<div class="mesh" aria-hidden="true"><i class="horizon"></i><i class="floor"></i></div>
-
-<header class="top">
-  <div class="brand"><img src="logo.jpeg" alt="ZCC"><div><b data-scramble>ZCC</b><em>EST. 1998 · KAMPALA</em></div></div>
-  <nav>
+<header class="nav">
+  <input class="burger" type="checkbox" id="m-open" aria-label="Menu">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <span class="zap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
+      <span class="bt"><b>ZCC</b><em>EST. 1998 · KAMPALA</em></span>
+    </a>
+    <nav class="links">
+      <a href="#mandate">Mandate</a><a href="#programmes">Programmes</a><a href="#surfaces">Surfaces</a><a href="#house">The house</a>
+    </nav>
+    <a class="pill menu-btn" id="menuBtn" href="#house">Book the desk</a>
+    <label class="burger-l" for="m-open"><span></span><span></span><span></span></label>
+  </div>
+  <div class="m-sheet">
     <a href="#mandate">Mandate</a><a href="#programmes">Programmes</a><a href="#surfaces">Surfaces</a><a href="#house">The house</a>
-  </nav>
+  </div>
 </header>
 
-<main>
+<main id="top">
+
 <section class="hero">
-  <p class="kicker" data-scramble>ZEUS CYBERNETICS CORP // THE WIRE ROOM</p>
-  <h1>
-    <span class="line"><span class="lw"><span class="l">THE NET</span></span></span>
-    <span class="line"><span class="lw"><span class="l">IS THE</span></span></span>
-    <span class="line gold"><span class="lw"><span class="l">THEATRE.</span></span></span>
-    <span class="drawline" aria-hidden="true"></span>
-  </h1>
-  <p class="sub">Kampala is the desk. The theatre is every reachable surface.</p>
-  <p class="catch"><span>HOLD THE WIRE.</span><span class="g">WE MEAN IT.</span></p>
-  <div class="hero-meta">
-    <span>SINCE 1998</span><i>◆</i><span>7 PROGRAMMES</span><i>◆</i><span>SIGNED SCOPE ONLY</span>
+  <div class="wrap hero-grid">
+    <div class="hero-l">
+      <span class="badge"><i></i>SYSTEM ONLINE · SINCE 1998</span>
+      <h1 class="disp">HOLD<br>THE WIRE.</h1>
+      <p class="sub">Kampala is the desk. The theatre is every reachable surface. We build the door, then attack it under a signed scope.</p>
+      <div class="cta">
+        <a class="btn solid" id="book" href="#">Book the desk <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn glass" id="call" href="tel:+256730078031">Call Mr. Robot</a>
+      </div>
+      <ul class="stats">
+        <li><b>1998</b><span>Established</span></li>
+        <li><b>07</b><span>Programmes</span></li>
+        <li><b>SIGNED</b><span>Scope only</span></li>
+      </ul>
+    </div>
+    <aside class="hero-r" aria-label="Desk status">
+      <div class="hud">
+        <div class="hud-top"><span>DESK&nbsp;STATUS</span><em class="live"><b></b>LIVE</em></div>
+        <ul class="hud-rows">
+          <li><span>NODE</span><b>KAMPALA · UG</b></li>
+          <li><span>EST.</span><b>1998</b></li>
+          <li><span>PROGRAMMES</span><b>07 / ACTIVE</b></li>
+          <li><span>SCOPE</span><b>SIGNED ONLY</b></li>
+          <li><span>MODE</span><b>AUTHORISED</b></li>
+        </ul>
+        <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="hud-foot"><span>UPLINK</span><b>STABLE</b></div>
+      </div>
+    </aside>
   </div>
 </section>
 
+<div class="marquee" aria-hidden="true"><div class="track" id="mq"></div></div>
+
 <section id="mandate" class="mandate">
-  <h2 class="triad">
-    <span data-scramble>HOLD THE WIRE.</span>
-    <span data-scramble>BUILD THE DOOR.</span>
-    <span data-scramble class="gold">TEST THE LOCK WE FITTED.</span>
-  </h2>
-  <p class="rule"></p>
-  <div class="mand-grid">
-    <div class="m reveal"><b>Infrastructure that stays up under load,</b><span>and a desk that watches it.</span></div>
-    <div class="m reveal"><b>Web and app surfaces we ship ourselves —</b><span>web, mail, identity, edges.</span></div>
-    <div class="m reveal"><b>Then we attack our own work under a signed scope.</b><span>Findings in a file.</span></div>
+  <div class="wrap">
+    <h2 class="triad">HOLD THE WIRE. <span>BUILD THE DOOR.</span> <em>TEST THE LOCK WE FITTED.</em></h2>
+    <div class="mgrid">
+      <div class="mcard reveal"><span class="mi">01</span><b>Infrastructure that stays up under load,</b><p>and a desk that watches it.</p></div>
+      <div class="mcard reveal"><span class="mi">02</span><b>Web and app surfaces we ship ourselves —</b><p>web, mail, identity, edges.</p></div>
+      <div class="mcard reveal"><span class="mi">03</span><b>Then we attack our own work under a signed scope.</b><p>Findings in a file.</p></div>
+    </div>
   </div>
 </section>
 
 <section id="programmes" class="prog">
-  <div class="prog-grid">
-    <div class="prog-sticky">
-      <h2 class="sec"><small>01 /</small> THE SEVEN</h2>
-      <div class="big-num" id="bigNum">01</div>
-      <p class="prog-name" id="progName">DATA PROTECTION</p>
-      <div class="bar"><i id="barFill"></i></div>
-    </div>
-    <div class="rows" id="rows"></div>
+  <div class="wrap">
+    <div class="sec-h"><small>01 /</small><h2>THE SEVEN</h2><p>Signed scope only. No methods on a public page.</p></div>
+    <div class="cards" id="cards"></div>
   </div>
 </section>
 
-<section id="surfaces" class="surfaces">
-  <div class="ticker"><div id="tick"></div></div>
-  <p class="cap">If it is reachable on the public net, it is in the conversation. The list is the internet, not a brochure of three products.</p>
+<section id="surfaces" class="surf">
+  <div class="wrap">
+    <div class="sec-h"><small>02 /</small><h2>THE SURFACES</h2><p>If it is reachable on the public net, it is in the conversation. The list is the internet, not a brochure of three products.</p></div>
+    <ul class="chips" id="chips"></ul>
+  </div>
 </section>
 
 <section id="house" class="house">
-  <h2 class="sec"><small>02 /</small> THE HOUSE</h2>
-  <div class="house-grid">
-    <div class="packet">
-      <svg viewBox="0 0 600 120" aria-label="Packet travelling the wire">
-        <path id="pwire" d="M0 60 H600" class="wbase"/>
-        <path d="M0 60 H150 L180 20 H300 L330 100 H450 L480 60 H600" class="wline"/>
-        <circle r="5" class="pulse"><animateMotion dur="4s" repeatCount="indefinite" rotate="auto">
-          <mpath href="#pwire2"/></animateMotion></circle>
-        <path id="pwire2" d="M0 60 H150 L180 20 H300 L330 100 H450 L480 60 H600" class="hidden"/>
-      </svg>
-    </div>
-    <div class="doors">
-      <a class="door" id="book" href="#"><b>Book the desk</b><span>Pick the programme. Pick a day. The form writes the mail.</span></a>
-      <a class="door" id="call" href="#"><b>Call Mr. Robot</b><span>If the file is on fire. Kampala time.</span></a>
+  <div class="wrap">
+    <div class="lab">
+      <div class="lab-txt">
+        <small>03 /</small>
+        <h2 class="disp sm">THE HOUSE</h2>
+        <p>The house is here. Book if it can wait. Call if it cannot. Every engagement opens on a signed scope and closes on a written file.</p>
+        <div class="doors">
+          <a class="btn solid" id="book2" href="#">Book the desk</a>
+          <a class="btn glass" href="mailto:dilhamjafferr@gmail.com?subject=ZCC%20signal">Signal the desk</a>
+        </div>
+      </div>
+      <div class="gen" aria-hidden="true">
+        <i class="ring r1"></i><i class="ring r2"></i><i class="ring r3"></i>
+        <span class="core"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg></span>
+      </div>
     </div>
   </div>
-  <p class="close">The house is here. Book if it can wait. Call if it cannot.</p>
 </section>
+
 </main>
 
 <footer>
-  <span>ZCC // KAMPALA · SG · UGANDA · <b>EST. 1998</b></span>
-  <span class="sig" id="sig">Digital architecture by Zeus Cybernetics Corp (ZCC)</span>
+  <div class="wrap fgrid">
+    <div class="fcol fbrand">
+      <a class="brand" href="#top"><span class="zap"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span><span class="bt"><b>ZCC</b><em>EST. 1998 · KAMPALA</em></span></a>
+      <p>Kampala cybersecurity house. We hold the wire, build the door, and test the lock we fitted.</p>
+      <div class="soc"><a href="#house" aria-label="Book"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none"/><path d="M4 7l8 6 8-6"/></svg></a><a href="tel:+256730078031" aria-label="Call"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-3 2a12 12 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></svg></a><a href="#surfaces" aria-label="Web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18" fill="none"/></svg></a></div>
+    </div>
+    <div class="fcol">
+      <h4>Protocol</h4>
+      <a href="#mandate">Mandate</a><a href="#programmes">The Seven</a><a href="#surfaces">Surfaces</a><a href="#house">The house</a>
+    </div>
+    <div class="fcol">
+      <h4>Frequency</h4>
+      <p>Leave a signal. The desk writes back.</p>
+      <form class="freq" id="freq">
+        <input type="email" id="femail" placeholder="you@company.com" aria-label="Email" required>
+        <button type="submit" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+    </div>
+    <div class="fcol">
+      <h4>Direct</h4>
+      <a href="mailto:zeusindustries.zy@gmail.com">zeusindustries.zy@gmail.com</a>
+      <a href="mailto:dilhamjafferr@gmail.com">dilhamjafferr@gmail.com</a>
+      <a href="tel:+256730078031">+256 730 078031</a>
+    </div>
+  </div>
+  <div class="wrap fbot">
+    <span>© <span id="yr"></span> ZEUS CYBERNETICS CORP · KAMPALA · SG · UGANDA · EST. 1998</span>
+    <span class="sig" id="sig">Digital architecture by Zeus Cybernetics Corp (ZCC)</span>
+  </div>
 </footer>
 
+<script src="vendor/three.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

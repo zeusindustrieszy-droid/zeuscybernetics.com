@@ -1,138 +1,93 @@
-// ZCC — THE WIRE ROOM
+// ZCC — TECH-NOIR / LAB STATUS
 const PROGRAMMES = [
-  ['01 · DATA PROTECTION', 'Policy, access control, backup drill. A written programme that keeps the house’s data in the house — and a test that the programme still holds.'],
-  ['02 · SIMULATION', 'A closed range. Live-net conditions copied into a room that is allowed to fail. Staff run the incident before the street does.'],
-  ['03 · AUTHORISED TESTING', 'Penetration work under a signed scope. Findings in a file the client can act on. No theatre. No methods on a public page.'],
-  ['04 · DEBUG', 'Control, feed, or build broken under load. Isolate the fault. Name it. Close it. Engineering, not a war story.'],
-  ['05 · THREAT ANALYSIS', 'What is on the wire, what it wants, what it already knows. A read the desk can use the same week.'],
-  ['06 · INTELLIGENCE', 'Open-scope collection across the surfaces the public internet already shows. Wide net. Written brief.'],
-  ['07 · DIGITAL INFRASTRUCTURE', 'Web and app build for the house. Then on-house authorised testing of those special assets — the thing we shipped is the thing we test, under a signed scope.'],
+  ['01', 'DATA PROTECTION', 'Policy, access control, backup drill. A written programme that keeps the house’s data in the house — and a test that the programme still holds.', 'M12 3l7 3v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6z M9 12l2 2 4-4'],
+  ['02', 'SIMULATION', 'A closed range. Live-net conditions copied into a room that is allowed to fail. Staff run the incident before the street does.', 'M2 12h4l2-7 4 14 2-7h6'],
+  ['03', 'AUTHORISED TESTING', 'Penetration work under a signed scope. Findings in a file the client can act on. No theatre. No methods on a public page.', 'M12 3v3M12 18v3M3 12h3M18 12h3 M12 8a4 4 0 100 8 4 4 0 000-8z'],
+  ['04', 'DEBUG', 'Control, feed, or build broken under load. Isolate the fault. Name it. Close it. Engineering, not a war story.', 'M8 7a4 4 0 018 0v5a4 4 0 01-8 0z M6 10h12M6 14h12M9 5L7 3M15 5l2-2'],
+  ['05', 'THREAT ANALYSIS', 'What is on the wire, what it wants, what it already knows. A read the desk can use the same week.', 'M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z M12 12m-2.5 0a2.5 2.5 0 105 0 2.5 2.5 0 10-5 0'],
+  ['06', 'INTELLIGENCE', 'Open-scope collection across the surfaces the public internet already shows. Wide net. Written brief.', 'M12 12V3M12 12l7 4M12 12l-7 4 M12 12m-9 0a9 9 0 1018 0 9 9 0 10-18 0'],
+  ['07', 'DIGITAL INFRASTRUCTURE', 'Web and app build for the house. Then on-house authorised testing of those special assets — the thing we shipped is the thing we test, under a signed scope.', 'M12 3l9 5-9 5-9-5z M3 13l9 5 9-5'],
 ];
 const SURFACES = ['WEB', 'MAIL', 'IDENTITY', 'CLOUD EDGES', 'VENDOR PORTALS', 'MOBILE', 'INDUSTRIAL LINKS'];
 const MAIL = 'zeusindustries.zy@gmail.com', INFO_MAIL = 'dilhamjafferr@gmail.com';
 const reduced = matchMedia('(prefers-reduced-motion:reduce)').matches;
 
-/* programme rows (verbatim copy) */
-document.getElementById('rows').innerHTML = PROGRAMMES.map(([t, b]) => `
-  <div class="row reveal" tabindex="0" data-n="${t.split(' · ')[0]}" data-name="${t.split(' · ')[1]}"
-    ><div class="idx">${t.split(' · ')[0]}</div>
-  <div><h3>${t.split(' · ')[1]}</h3><p>${b}</p></div><span class="plus">+</span></div>`).join('');
-document.querySelectorAll('.row').forEach(r => r.addEventListener('click', () => r.classList.toggle('open')));
+const svg = (d) => `<svg class="cicon" viewBox="0 0 24 24">${d.trim().split(/\s+(?=M)/).map(p => `<path d="${p}"/>`).join('')}</svg>`;
 
-/* surfaces ticker */
-document.getElementById('tick').innerHTML =
-  [...SURFACES, ...SURFACES, ...SURFACES, ...SURFACES].map(s => `<span>${s}</span>`).join('');
+/* seven programme cards (verbatim copy) */
+document.getElementById('cards').innerHTML = PROGRAMMES.map(([code, name, body, icon]) => `
+  <article class="card reveal">
+    <div class="card-top"><span class="card-code">${code}</span>${svg(icon)}</div>
+    <div class="card-bot"><div><h3>${name}</h3><p>${body}</p></div><span class="plus">+</span></div>
+  </article>`).join('');
+
+/* surfaces chips */
+document.getElementById('chips').innerHTML = SURFACES.map(s => `<li>${s}</li>`).join('');
+
+/* marquee — duplicate once for a seamless -50% loop */
+const PHRASES = [...PROGRAMMES.map(p => p[1]), ...SURFACES];
+document.getElementById('mq').innerHTML = [...PHRASES, ...PHRASES].map(p => `<span>${p}</span><span>◆</span>`).join('');
 
 /* house doors — real mailboxes, tel links */
-document.getElementById('book').href = `mailto:${MAIL}?subject=${encodeURIComponent('ZCC appointment — ') + PROGRAMMES[0][0]}&body=${encodeURIComponent('Programme: \nPreferred day: \nOrganisation: \nWhat is happening: ')}`;
-document.getElementById('call').href = 'tel:+256730078031';
+const bookHref = `mailto:${MAIL}?subject=${encodeURIComponent('ZCC appointment — ' + PROGRAMMES[0][1])}&body=${encodeURIComponent('Programme: \nPreferred day: \nOrganisation: \nWhat is happening: ')}`;
+['book', 'book2', 'menuBtn'].forEach(id => { const el = document.getElementById(id); if (el) el.href = bookHref; });
+
+/* frequency — mailto-only, no backend */
+document.getElementById('freq').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = document.getElementById('femail').value.trim();
+  if (v) location.href = `mailto:${MAIL}?subject=${encodeURIComponent('ZCC signal — ' + v)}&body=${encodeURIComponent('Signal from: ' + v + '\n')}`;
+});
 
 /* reveal */
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-/* scramble-decode on view */
-const GLYPHS = '▚▞◆▚/\\|_=+*#01';
-function scramble(el) {
-  const final = el.textContent; let f = 0;
-  const steps = 14;
-  const t = setInterval(() => {
-    f++;
-    el.textContent = final.split('').map((c, i) =>
-      c === ' ' ? ' ' : i < (f / steps) * final.length ? c : GLYPHS[Math.random() * GLYPHS.length | 0]).join('');
-    if (f >= steps) { clearInterval(t); el.textContent = final; }
-  }, 45);
-}
-if (!reduced) {
-  const so = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { scramble(e.target); so.unobserve(e.target); } }), { threshold: .8 });
-  document.querySelectorAll('[data-scramble]').forEach(el => so.observe(el));
-}
-
-/* the rail — one wire, the scroll pulse travels it and arrives at the signature */
-const root = document.documentElement;
-const sig = document.getElementById('sig');
+/* nav state + signature lit at the end of the wire */
+const root = document.documentElement, nav = document.querySelector('.nav'), sig = document.getElementById('sig');
 let ticking = false;
-function rail() {
-  const p = Math.min(1, Math.max(0, scrollY / (root.scrollHeight - innerHeight)));
-  root.style.setProperty('--sp', p.toFixed(4));
+function onScroll() {
+  const denom = root.scrollHeight - innerHeight;
+  const p = denom > 0 ? Math.min(1, Math.max(0, scrollY / denom)) : 0;
+  nav.classList.toggle('stuck', scrollY > 24);
   sig.classList.toggle('lit', p > .985);
   ticking = false;
 }
-if (!reduced) {
-  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(rail); } }, { passive: true });
-  rail();
-}
+addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+onScroll();
+document.getElementById('yr').textContent = new Date().getFullYear();
 
-/* the seven — sticky index tracks whichever row crosses centre */
-const bigNum = document.getElementById('bigNum');
-const progName = document.getElementById('progName');
-const barFill = document.getElementById('barFill');
-let curK = 0;
-function setK(k, name) {
-  if (k === curK) return;
-  curK = k;
-  bigNum.textContent = String(k + 1).padStart(2, '0');
-  progName.textContent = name;
-  barFill.style.setProperty('--k', k + 1);
-  bigNum.classList.remove('snap'); void bigNum.offsetWidth; bigNum.classList.add('snap');
-}
-const ko = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) {
-    e.target.classList.add('active');
-    setK(+e.target.dataset.n - 1, e.target.dataset.name);
-  } else e.target.classList.remove('active');
-}), { rootMargin: '-45% 0px -45% 0px' });
-document.querySelectorAll('.row').forEach(r => ko.observe(r));
-
-/* the wire — node constellation that answers the cursor */
-const cv = document.getElementById('wire'), cx = cv.getContext('2d');
-let W, H, N, nodes = [];
-const DPR = devicePixelRatio;
-const mouse = { x: -1e4, y: -1e4 };
-addEventListener('pointermove', e => { mouse.x = e.clientX * DPR; mouse.y = e.clientY * DPR; }, { passive: true });
-addEventListener('pointerdown', e => {
-  const mx = e.clientX * DPR, my = e.clientY * DPR;
-  for (const n of nodes) {
-    const dx = n.x - mx, dy = n.y - my, d = Math.hypot(dx, dy);
-    if (d < 220 * DPR && d > 0) { n.vx += dx / d * 2.2 * DPR; n.vy += dy / d * 2.2 * DPR; }
+/* the field — 3500-point cyan particle environment that answers the cursor */
+(function field() {
+  if (typeof THREE === 'undefined') return;
+  const cv = document.getElementById('field');
+  const renderer = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.setSize(innerWidth, innerHeight);
+  const scene = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, .1, 100);
+  cam.position.z = 2;
+  const N = 3500, pos = new Float32Array(N * 3);
+  for (let i = 0; i < N; i++) {
+    pos[i * 3] = (Math.random() - .5) * 5;
+    pos[i * 3 + 1] = (Math.random() - .5) * 3.4;
+    pos[i * 3 + 2] = (Math.random() - .5) * 3 - .4;
   }
-}, { passive: true });
-function resize() {
-  W = cv.width = innerWidth * DPR; H = cv.height = innerHeight * DPR;
-  N = Math.min(80, innerWidth / 20 | 0);
-  nodes = Array.from({ length: N }, () => ({
-    x: Math.random() * W, y: Math.random() * H,
-    vx: (Math.random() - .5) * .18 * DPR, vy: (Math.random() - .5) * .18 * DPR,
-  }));
-}
-resize(); addEventListener('resize', resize);
-const LINK = 130 * DPR, REPEL = 120 * DPR;
-function draw() {
-  cx.clearRect(0, 0, W, H);
-  for (const n of nodes) {
-    const dx = n.x - mouse.x, dy = n.y - mouse.y, d = Math.hypot(dx, dy) || 1;
-    if (d < REPEL) { const f = (1 - d / REPEL) * .35; n.vx += dx / d * f; n.vy += dy / d * f; }
-    n.vx *= .986; n.vy *= .986;
-    const s = Math.hypot(n.vx, n.vy);
-    if (s < .06 * DPR) { n.vx += (Math.random() - .5) * .02 * DPR; n.vy += (Math.random() - .5) * .02 * DPR; }
-    n.x += n.vx; n.y += n.vy;
-    if (n.x < 0 || n.x > W) n.vx *= -1;
-    if (n.y < 0 || n.y > H) n.vy *= -1;
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const mat = new THREE.PointsMaterial({ color: 0x00f3ff, size: .005, transparent: true, opacity: .9, sizeAttenuation: true, blending: THREE.AdditiveBlending, depthWrite: false });
+  const pts = new THREE.Points(geo, mat);
+  scene.add(pts);
+  const m = { x: 0, y: 0, tx: 0, ty: 0 };
+  addEventListener('pointermove', e => { m.tx = (e.clientX / innerWidth - .5) * 2; m.ty = (e.clientY / innerHeight - .5) * 2; }, { passive: true });
+  addEventListener('resize', () => { cam.aspect = innerWidth / innerHeight; cam.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
+  function frame() {
+    m.x += (m.tx - m.x) * .04; m.y += (m.ty - m.y) * .04;
+    pts.rotation.y += .0006; pts.rotation.x = m.y * .12;
+    cam.position.x = m.x * .35; cam.position.y = -m.y * .25; cam.lookAt(scene.position);
+    renderer.render(scene, cam);
+    requestAnimationFrame(frame);
   }
-  cx.lineWidth = DPR;
-  for (let i = 0; i < N; i++) for (let j = i + 1; j < N; j++) {
-    const a = nodes[i], b = nodes[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy);
-    if (d < LINK) {
-      const near = Math.hypot((a.x + b.x) / 2 - mouse.x, (a.y + b.y) / 2 - mouse.y) < REPEL;
-      cx.strokeStyle = near ? `rgba(196,163,90,${(1 - d / LINK) * .5})` : `rgba(196,163,90,${(1 - d / LINK) * .16})`;
-      cx.beginPath(); cx.moveTo(a.x, a.y); cx.lineTo(b.x, b.y); cx.stroke();
-    }
-  }
-  for (const n of nodes) {
-    const d = Math.hypot(n.x - mouse.x, n.y - mouse.y);
-    cx.fillStyle = d < REPEL ? 'rgba(196,163,90,.9)' : 'rgba(239,234,224,.5)';
-    cx.beginPath(); cx.arc(n.x, n.y, (d < REPEL ? 1.8 : 1) * DPR, 0, 7); cx.fill();
-  }
-}
-function tick() { draw(); requestAnimationFrame(tick); }
-draw(); if (!reduced) tick();
+  renderer.render(scene, cam);
+  if (!reduced) frame();
+})();
