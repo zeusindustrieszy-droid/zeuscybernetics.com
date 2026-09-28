@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zeus Cybernetics Corp (ZCC) — The net is the theatre | Kampala</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Zeus Cybernetics Corp (ZCC) — Hold the Wire | Kampala</title>
 <meta name="description" content="Zeus Cybernetics Corp (ZCC), Kampala. Est. 1998. Cybersecurity for the whole surface: data protection, simulation, authorised testing, debug, threat analysis, intelligence, digital infrastructure.">
 <link rel="canonical" href="https://zeusindustrieszy-droid.github.io/zeuscybernetics.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Zeus Cybernetics Corp">
-<meta property="og:title" content="Zeus Cybernetics Corp (ZCC) — The net is the theatre">
-<meta property="og:description" content="Kampala cybersecurity house, est. 1998. Hold the wire, build the door, test the lock we fitted. Seven programmes, signed scope only.">
+<meta property="og:title" content="Zeus Cybernetics Corp (ZCC) — Hold the Wire">
+<meta property="og:description" content="Kampala cybersecurity house, est. 1998. Seven programmes, signed scope only.">
 <meta property="og:url" content="https://zeusindustrieszy-droid.github.io/zeuscybernetics.com/">
 <meta property="og:image" content="https://zeusindustrieszy-droid.github.io/zeuscybernetics.com/logo.jpeg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Zeus Cybernetics Corp (ZCC) — The net is the theatre">
+<meta name="twitter:title" content="Zeus Cybernetics Corp (ZCC) — Hold the Wire">
 <meta name="twitter:description" content="Kampala cybersecurity house, est. 1998. Seven programmes, signed scope only.">
 <meta name="twitter:image" content="https://zeusindustrieszy-droid.github.io/zeuscybernetics.com/logo.jpeg">
-<meta name="theme-color" content="#050505">
+<meta name="theme-color" content="#E6EDF6">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -38,151 +38,359 @@
      in canonical, og:url, twitter:image, JSON-LD url/logo, sitemap.xml and robots.txt, then resubmit in Search Console. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=block" rel="stylesheet">
 <link rel="icon" href="logo.jpeg">
-<link rel="stylesheet" href="styles.css">
+<style>
+:root{
+  --u: min(100vw / 1280, 100vh / 960);
+  --ink:#020C21; --ink-soft:#0F182F; --muted:#59627E; --muted2:#4D5B77;
+  --frame:#E6EDF6; --cta:#0F1B31; --cta-knob:#384B64; --meet-knob:#1A2B45;
+  --accent:#4A78B0; --track:#DDE4EE;
+}
+@supports (height:100dvh){:root{--u: min(100vw / 1280, 100dvh / 960)}}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--frame);overflow:hidden;color:var(--ink);
+  font-family:Inter,"Helvetica Neue",Helvetica,Arial,sans-serif;font-synthesis:none;
+  -webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+
+.stack,.row,.hero-blk,.tagrow,.stats,.stat{display:contents}
+.l{position:absolute;z-index:2}
+.t{left:calc((var(--x) + 13)*var(--u));top:calc((var(--y) + 15)*var(--u))}
+.c{left:calc((var(--x) + 13)*var(--u));top:calc(50% + (var(--y) - 2)*var(--u))}
+.b{left:calc((var(--x) + 13)*var(--u));bottom:calc((var(--y) + 19)*var(--u))}
+.r{left:auto;right:calc((var(--x) + 19)*var(--u))}
+.sx{display:inline-block;transform-origin:left top;transform:scaleX(var(--sx,1))}
+
+.page{position:fixed;inset:0;background:var(--frame)}
+.card{position:absolute;inset:0;isolation:isolate}
+.bg{position:absolute;left:-2px;top:-2px;width:calc(100vw + 4px);height:calc(100vh + 4px);
+  object-fit:cover;object-position:50% 50%;z-index:0;filter:brightness(1.006) saturate(.965);transform:scale(1.002)}
+@supports (height:100dvh){.bg{height:calc(100dvh + 4px)}}
+.tint{position:absolute;inset:0;background:rgba(255,249,240,.05);z-index:1;pointer-events:none}
+
+.brand{display:flex;align-items:center;text-decoration:none;color:inherit;height:calc(39*var(--u))}
+.mark{width:calc(39*var(--u));height:calc(39*var(--u));display:block;flex:none}
+.brand b{font-size:calc(22*var(--u));font-weight:520;letter-spacing:-0.03em;line-height:1;margin-left:calc(7.7*var(--u))}
+
+.nav{position:absolute;left:50%;transform:translateX(calc(-50% - 3*var(--u)));
+  top:calc((31 + 15)*var(--u));width:calc(293*var(--u));height:calc(67*var(--u));border-radius:999px;
+  background:rgba(255,255,255,0.78);border:calc(1*var(--u)) solid rgba(255,255,255,.85);
+  -webkit-backdrop-filter:blur(calc(40*var(--u)));backdrop-filter:blur(calc(40*var(--u)));
+  box-shadow:0 0 0 calc(1.3*var(--u)) rgba(120,145,180,0.2),0 calc(2*var(--u)) calc(10*var(--u)) rgba(28,52,92,.05);z-index:2}
+.nav>*{position:absolute}
+.nav span{font-size:calc(15*var(--u));font-weight:570;letter-spacing:-0.0561em;line-height:1;color:#202940;white-space:nowrap}
+.nav i{display:block}
+.n-home{left:calc(36*var(--u));top:calc(22*var(--u));width:calc(21.3*var(--u));height:calc(22.4*var(--u))}
+.n-explore{left:calc(72*var(--u));top:calc(26*var(--u))}
+.n-div{left:calc(144*var(--u));top:calc(18*var(--u));width:calc(1.5*var(--u));height:calc(31*var(--u));background:#CED5E0;border:0}
+.n-grid{left:calc(168*var(--u));top:calc(24*var(--u));width:calc(20.2*var(--u));height:calc(20.2*var(--u))}
+.n-product{left:calc(203.8*var(--u));top:calc(26*var(--u))}
+
+.cta{width:calc(217*var(--u));height:calc(70*var(--u));border-radius:999px;background:var(--cta);
+  text-decoration:none;display:block;box-shadow:0 calc(10*var(--u)) calc(24*var(--u)) rgba(11,26,50,.18)}
+.cta span{position:absolute;left:calc(34.8*var(--u));top:calc(27.55*var(--u));font-size:calc(17.5*var(--u));
+  font-weight:400;letter-spacing:-0.0442em;line-height:1;color:#fff;white-space:nowrap}
+.knob{position:absolute;border-radius:50%;background:var(--cta-knob);display:flex;align-items:center;justify-content:center}
+.cta .knob{left:calc(156*var(--u));top:calc(10.5*var(--u));width:calc(49*var(--u));height:calc(49*var(--u))}
+.knob svg{width:calc(17*var(--u));height:calc(17*var(--u))}
+
+.eyebrow{font-size:calc(16*var(--u));font-weight:470;letter-spacing:-0.015em;line-height:1;color:var(--muted);white-space:nowrap}
+h1{font-size:calc(98*var(--u));font-weight:360;letter-spacing:-0.035em;line-height:calc(90*var(--u));color:var(--ink);white-space:nowrap}
+.play{width:calc(50.5*var(--u));height:calc(50.5*var(--u));border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 calc(6*var(--u)) calc(18*var(--u)) rgba(28,52,92,.10)}
+.play svg{width:calc(13*var(--u));height:calc(14*var(--u))}
+.tag{font-size:calc(24*var(--u));font-weight:470;letter-spacing:-0.03em;line-height:1;color:var(--ink-soft);white-space:nowrap}
+
+.panel{width:calc(275*var(--u));height:calc(271*var(--u));border-radius:calc(28*var(--u));
+  background:linear-gradient(135deg,rgba(255,255,255,0.44),rgba(255,255,255,0.16));
+  border:calc(1*var(--u)) solid rgba(255,255,255,.60);
+  -webkit-backdrop-filter:blur(calc(40*var(--u))) saturate(112%);backdrop-filter:blur(calc(40*var(--u))) saturate(112%);
+  box-shadow:inset calc(1*var(--u)) calc(1*var(--u)) 0 rgba(255,255,255,.55),inset calc(-1*var(--u)) calc(-1*var(--u)) 0 rgba(255,255,255,.18),
+    0 calc(18*var(--u)) calc(40*var(--u)) rgba(28,52,92,.07)}
+.panel>*{position:absolute}
+.p-title{left:calc(28*var(--u));top:calc(26*var(--u));font-size:calc(22*var(--u));font-weight:500;letter-spacing:-0.02em;line-height:1;color:var(--ink)}
+.dot{left:calc(116*var(--u));top:calc(33*var(--u));width:calc(9*var(--u));height:calc(9*var(--u));border-radius:50%;background:var(--accent)}
+.shield{left:calc(178*var(--u));top:calc(22*var(--u));width:calc(68*var(--u));height:calc(68*var(--u));border-radius:50%;
+  background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 calc(26*var(--u)) calc(10*var(--u)) rgba(255,255,255,.5),0 calc(6*var(--u)) calc(16*var(--u)) rgba(28,52,92,.06)}
+.shield svg{width:calc(26*var(--u));height:calc(34*var(--u))}
+.p-row{left:calc(28*var(--u));right:calc(24*var(--u));display:flex;align-items:baseline;gap:calc(8*var(--u));
+  font-size:calc(13.5*var(--u));font-weight:470;letter-spacing:-0.02em;line-height:1;color:var(--ink-soft)}
+.p-row u{font-style:normal;text-decoration:none;color:var(--accent);font-weight:520;font-size:calc(12*var(--u))}
+
+.num{font-size:calc(100*var(--u));font-weight:200;letter-spacing:0em;line-height:1;color:var(--ink);white-space:nowrap}
+.lbl{font-size:calc(19*var(--u));font-weight:400;letter-spacing:-0.02em;line-height:calc(23.5*var(--u));color:#39455F}
+.slash{width:calc(23*var(--u));height:calc(75*var(--u));background:linear-gradient(to top left,transparent calc(50% - .85*var(--u)),
+  #A7B4C6 calc(50% - .85*var(--u)),#A7B4C6 calc(50% + .85*var(--u)),transparent calc(50% + .85*var(--u)))}
+
+.meet{width:calc(269*var(--u));height:calc(86*var(--u));border-radius:999px;display:block;text-decoration:none;
+  background:rgba(255,255,255,0.325);border:calc(1*var(--u)) solid rgba(255,255,255,.62);
+  -webkit-backdrop-filter:blur(calc(40*var(--u)));backdrop-filter:blur(calc(40*var(--u)));
+  box-shadow:0 0 0 calc(1.2*var(--u)) rgba(120,145,180,0.1),inset calc(1*var(--u)) calc(1*var(--u)) 0 rgba(255,255,255,.5),0 calc(8*var(--u)) calc(22*var(--u)) rgba(28,52,92,.035)}
+.meet>*{position:absolute}
+.thumb{left:calc(12*var(--u));top:calc(11*var(--u));width:calc(64*var(--u));height:calc(64*var(--u));border-radius:50%;overflow:hidden;
+  box-shadow:inset 0 0 0 calc(1*var(--u)) rgba(255,255,255,.45)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.meet b{left:calc(89.8*var(--u));top:calc(34.55*var(--u));font-size:calc(17.5*var(--u));font-weight:425;letter-spacing:-0.0681em;line-height:1;color:#1B2A44;white-space:nowrap}
+.meet .knob{left:calc(206*var(--u));top:calc(17*var(--u));width:calc(50*var(--u));height:calc(50*var(--u));background:var(--meet-knob)}
+
+.sig{position:absolute;left:0;right:0;bottom:calc(9*var(--u));z-index:2;text-align:center;font-size:calc(12.5*var(--u));
+  font-weight:425;letter-spacing:-0.02em;color:#4D5B77}
+
+.burger{display:none;align-items:center;justify-content:center;flex-direction:column;gap:calc(6*var(--u));
+  width:calc(56*var(--u));height:calc(56*var(--u));border-radius:999px;padding:0;cursor:pointer;
+  background:rgba(255,255,255,0.78);border:calc(1*var(--u)) solid rgba(255,255,255,.85);
+  -webkit-backdrop-filter:blur(calc(40*var(--u)));backdrop-filter:blur(calc(40*var(--u)));
+  box-shadow:0 0 0 calc(1.3*var(--u)) rgba(120,145,180,0.2),0 calc(2*var(--u)) calc(10*var(--u)) rgba(28,52,92,.05)}
+.burger i{display:block;width:calc(20*var(--u));height:calc(1.8*var(--u));border-radius:999px;background:#202940;
+  transition:transform .3s cubic-bezier(.2,.7,.3,1),opacity .3s}
+.burger[aria-expanded="true"] i:first-child{transform:translateY(calc(3.9*var(--u))) rotate(45deg)}
+.burger[aria-expanded="true"] i:last-child{transform:translateY(calc(-3.9*var(--u))) rotate(-45deg)}
+.burger:focus-visible{outline:calc(2*var(--u)) solid #2f5f9e;outline-offset:calc(3*var(--u))}
+.menu{display:contents}
+
+@media (max-aspect-ratio: 87/80), (max-width: 899px), (max-height: 639px){
+  :root{--u: min(100vw / 880, 100vh / 1220); --pad: 52}
+  @supports (height:100dvh){:root{--u: min(100vw / 880, 100dvh / 1220)}}
+  .card{inset:0;border-radius:0}
+  .stack{display:flex;flex-direction:column;justify-content:space-between;position:absolute;inset:0;z-index:2;padding:calc(var(--pad)*var(--u))}
+  .row,.hero-blk,.stats,.stat,.tagrow{display:flex}
+  .row{align-items:center;justify-content:space-between;width:100%}
+  .hero-blk{flex-direction:column;align-items:flex-start;width:100%;margin:calc(30*var(--u)) 0}
+  .tagrow{align-items:center;gap:calc(16*var(--u));margin-top:calc(28*var(--u))}
+  .stats{align-items:flex-end;gap:calc(26*var(--u));flex-wrap:wrap}
+  .stat{align-items:flex-end;gap:calc(16*var(--u))}
+  .l,.t,.c,.b,.r{position:relative;left:auto;right:auto;top:auto;bottom:auto}
+  h1{margin-top:calc(16*var(--u))}
+  .play{flex:none}
+  .panel{align-self:flex-end;margin-top:calc(36*var(--u))}
+  .row:last-child{flex-wrap:wrap;row-gap:calc(24*var(--u))}
+  .meet{margin-left:auto}
+  .nav{position:relative;left:auto;top:auto;transform:none;flex:none}
+  .sig{position:static;margin-top:calc(18*var(--u));width:100%}
+  @media (min-aspect-ratio: 1/1){
+    :root{--u: min(100vw / 1240, 100vh / 820); --pad: 46}
+    @supports (height:100dvh){:root{--u: min(100vw / 1240, 100dvh / 820)}}
+    @media (max-height: 520px){:root{--u: min(100vw / 900, 100vh / 560); --pad: 30}
+      @supports (height:100dvh){:root{--u: min(100vw / 900, 100dvh / 560)}}}
+    .hero-blk{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:calc(46*var(--u));align-items:end;margin:calc(24*var(--u)) 0}
+    .eyebrow{grid-column:1;grid-row:1}
+    h1{grid-column:1;grid-row:2}
+    .tagrow{grid-column:1;grid-row:3}
+    .panel{grid-column:2;grid-row:1 / span 3;align-self:center;margin-top:0}
+    .row:last-child{flex-wrap:nowrap}
+  }
+  @media (max-width: 640px) and (max-aspect-ratio: 1/1){
+    :root{--u: min(100vw / 600, 100vh / 940);--t: max(var(--u), min(0.85px, 100vh / 780));--pad: 40}
+    @supports (height:100dvh){:root{--u: min(100vw / 600, 100dvh / 940);--t: max(var(--u), min(0.85px, 100dvh / 780))}}
+    .sx{transform:none}
+    .brand{height:auto}
+    .mark{width:calc(36*var(--t));height:calc(36*var(--t))}
+    .brand b{font-size:calc(21*var(--t));margin-left:calc(8*var(--t))}
+    h1{font-size:calc(66*var(--u));line-height:calc(64*var(--u));margin-top:calc(12*var(--u));white-space:normal}
+    .eyebrow{font-size:calc(16*var(--t))}
+    .hero-blk{margin:calc(24*var(--u)) 0}
+    .tagrow{gap:calc(14*var(--t));margin-top:calc(22*var(--u))}
+    .tag{font-size:calc(19*var(--t));line-height:calc(25*var(--t));white-space:normal}
+    .play{width:calc(48*var(--t));height:calc(48*var(--t))}
+    .play svg{width:calc(12*var(--t));height:calc(13*var(--t))}
+    .panel{width:100%;align-self:stretch;height:auto;padding:calc(22*var(--t)) calc(20*var(--t));margin-top:calc(24*var(--u))}
+    .p-title{position:relative;left:auto;top:auto;font-size:calc(20*var(--t))}
+    .dot{position:absolute;right:calc(104*var(--t));top:calc(26*var(--t));width:calc(9*var(--t));height:calc(9*var(--t))}
+    .shield{position:absolute;right:calc(20*var(--t));top:calc(18*var(--t));width:calc(56*var(--t));height:calc(56*var(--t))}
+    .shield svg{width:calc(22*var(--t));height:calc(30*var(--t))}
+    .p-row{position:relative;left:auto;right:auto;top:auto!important;font-size:calc(15*var(--t));margin-top:calc(13*var(--t))}
+    .p-row u{font-size:calc(13*var(--t))}
+    .stats{gap:calc(18*var(--u));align-items:center;flex-wrap:nowrap}
+    .stat{flex-direction:column;align-items:flex-start;gap:calc(6*var(--t))}
+    .num{font-size:calc(76*var(--u))}
+    .lbl{font-size:calc(15*var(--t));line-height:calc(19*var(--t))}
+    .slash{height:calc(92*var(--t));width:calc(29*var(--t));align-self:center}
+    .meet{width:100%;height:calc(72*var(--t))}
+    .thumb{left:calc(9*var(--t));top:calc(5*var(--t));width:calc(62*var(--t));height:calc(62*var(--t))}
+    .meet b{left:calc(84*var(--t));top:calc(28*var(--t));font-size:calc(17*var(--t))}
+    .meet .knob{left:auto;right:calc(11*var(--t));top:calc(11*var(--t));width:calc(50*var(--t));height:calc(50*var(--t))}
+  }
+}
+
+@media (max-aspect-ratio: 1/1){
+  .burger{display:flex}
+  .menu{display:block;position:absolute;z-index:9;top:calc((var(--pad) + 68)*var(--u));right:calc(var(--pad)*var(--u));
+    width:calc(304*var(--u));padding:calc(16*var(--u));border-radius:calc(30*var(--u));background:rgba(255,255,255,.82);
+    border:calc(1*var(--u)) solid rgba(255,255,255,.85);-webkit-backdrop-filter:blur(calc(40*var(--u)));backdrop-filter:blur(calc(40*var(--u)));
+    box-shadow:0 0 0 calc(1.3*var(--u)) rgba(120,145,180,.2),0 calc(16*var(--u)) calc(34*var(--u)) rgba(28,52,92,.10);
+    opacity:0;visibility:hidden;transform:translateY(calc(-10*var(--u))) scale(.97);transform-origin:top right;
+    transition:opacity .26s cubic-bezier(.2,.7,.3,1),transform .26s cubic-bezier(.2,.7,.3,1),visibility .26s}
+  .menu[data-open]{opacity:1;visibility:visible;transform:none}
+  .menu .nav{position:relative;left:auto;top:auto;transform:none;width:100%;height:auto;display:grid;
+    grid-template-columns:auto 1fr;align-items:center;column-gap:calc(16*var(--u));row-gap:calc(16*var(--u));
+    padding:calc(8*var(--u)) calc(10*var(--u));border:0;background:none;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .menu .nav>*{position:relative;left:auto;top:auto}
+  .menu .nav span{font-size:calc(19*var(--u))}
+  .menu .n-div{grid-column:1 / -1;width:100%;height:calc(1.2*var(--u));margin:calc(2*var(--u)) 0}
+  .menu .cta{position:relative;left:auto;top:auto;width:100%;height:calc(64*var(--u));margin-top:calc(14*var(--u))}
+  .menu .cta span{left:calc(28*var(--u));top:calc(23*var(--u));font-size:calc(19*var(--u))}
+  .menu .cta .knob{left:auto;right:calc(9*var(--u));top:calc(7*var(--u));width:calc(50*var(--u));height:calc(50*var(--u))}
+  @media (max-width: 640px){
+    .burger{width:calc(56*var(--t));height:calc(56*var(--t));gap:calc(6*var(--t))}
+    .burger i{width:calc(20*var(--t));height:calc(1.8*var(--t))}
+    .burger[aria-expanded="true"] i:first-child{transform:translateY(calc(3.9*var(--t))) rotate(45deg)}
+    .burger[aria-expanded="true"] i:last-child{transform:translateY(calc(-3.9*var(--t))) rotate(-45deg)}
+    .menu{width:auto;left:calc(var(--pad)*var(--u));right:calc(var(--pad)*var(--u));top:calc(var(--pad)*var(--u) + 68*var(--t));padding:calc(14*var(--t));border-radius:calc(28*var(--t))}
+    .menu .nav{column-gap:calc(15*var(--t));row-gap:calc(15*var(--t));padding:calc(6*var(--t)) calc(8*var(--t))}
+    .menu .nav span{font-size:calc(18*var(--t))}
+    .menu .cta{height:calc(60*var(--t));margin-top:calc(12*var(--t))}
+    .menu .cta span{left:calc(26*var(--t));top:calc(21*var(--t));font-size:calc(18*var(--t))}
+    .menu .cta .knob{right:calc(7*var(--t));top:calc(6*var(--t));width:calc(48*var(--t));height:calc(48*var(--t))}
+  }
+}
+
+@media (prefers-reduced-motion:no-preference){
+  .cta,.meet{transition:transform .35s cubic-bezier(.2,.7,.3,1)}
+  .cta:hover,.meet:hover{transform:translateY(calc(-2*var(--u)))}
+}
+a:focus-visible{outline:calc(2*var(--u)) solid #2f5f9e;outline-offset:calc(3*var(--u))}
+
+html.pre .brand,html.pre .nav,html.pre .cta,html.pre .burger,html.pre .eyebrow,html.pre .play,
+html.pre .tag,html.pre .panel,html.pre .lbl,html.pre .meet{opacity:0}
+html.pre h1 .sx,html.pre .num{clip-path:inset(100% 0 -14% 0)}
+html.pre .slash{scale:1 0}
+html.pre .dot{scale:0}
+html.pre .p-row{opacity:0}
+</style>
+<script>
+(function(){var d=document.documentElement;
+  if(!('animate' in Element.prototype))return;
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  d.classList.add('pre');
+  setTimeout(function(){d.classList.remove('pre')},4000);
+})();
+</script>
 </head>
 <body>
+<div class="page">
+  <div class="card">
+    <video class="bg" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true"
+      poster="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_105822_bf7c2d53-9957-4521-bbbf-7c1ab7a70130.png"
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_105953_21ad8049-9088-4a00-bad3-aee6b5575a2b.mp4"></video>
+    <div class="tint" aria-hidden="true"></div>
+    <div class="stack">
 
-<canvas id="field" aria-hidden="true"></canvas>
-<div class="glow" aria-hidden="true"></div>
-<div class="grain" aria-hidden="true"></div>
-
-<header class="nav">
-  <input class="burger" type="checkbox" id="m-open" aria-label="Menu">
-  <div class="wrap nav-in">
-    <a class="brand" href="#top">
-      <span class="zap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
-      <span class="bt"><b>ZCC</b><em>EST. 1998 · KAMPALA</em></span>
-    </a>
-    <nav class="links">
-      <a href="#mandate">Mandate</a><a href="#programmes">Programmes</a><a href="#surfaces">Surfaces</a><a href="#house">The house</a>
-    </nav>
-    <a class="pill menu-btn" id="menuBtn" href="#house">Book the desk</a>
-    <label class="burger-l" for="m-open"><span></span><span></span><span></span></label>
-  </div>
-  <div class="m-sheet">
-    <a href="#mandate">Mandate</a><a href="#programmes">Programmes</a><a href="#surfaces">Surfaces</a><a href="#house">The house</a>
-  </div>
-</header>
-
-<main id="top">
-
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-l">
-      <span class="badge"><i></i>SYSTEM ONLINE · SINCE 1998</span>
-      <h1 class="disp">HOLD<br>THE WIRE.</h1>
-      <p class="sub">Kampala is the desk. The theatre is every reachable surface. We build the door, then attack it under a signed scope.</p>
-      <div class="cta">
-        <a class="btn solid" id="book" href="#">Book the desk <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn glass" id="call" href="tel:+256730078031">Call Mr. Robot</a>
-      </div>
-      <ul class="stats">
-        <li><b>1998</b><span>Established</span></li>
-        <li><b>07</b><span>Programmes</span></li>
-        <li><b>SIGNED</b><span>Scope only</span></li>
-      </ul>
-    </div>
-    <aside class="hero-r" aria-label="Desk status">
-      <div class="hud">
-        <div class="hud-top"><span>DESK&nbsp;STATUS</span><em class="live"><b></b>LIVE</em></div>
-        <ul class="hud-rows">
-          <li><span>NODE</span><b>KAMPALA · UG</b></li>
-          <li><span>EST.</span><b>1998</b></li>
-          <li><span>PROGRAMMES</span><b>07 / ACTIVE</b></li>
-          <li><span>SCOPE</span><b>SIGNED ONLY</b></li>
-          <li><span>MODE</span><b>AUTHORISED</b></li>
-        </ul>
-        <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="hud-foot"><span>UPLINK</span><b>STABLE</b></div>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<div class="marquee" aria-hidden="true"><div class="track" id="mq"></div></div>
-
-<section id="mandate" class="mandate">
-  <div class="wrap">
-    <h2 class="triad">HOLD THE WIRE. <span>BUILD THE DOOR.</span> <em>TEST THE LOCK WE FITTED.</em></h2>
-    <div class="mgrid">
-      <div class="mcard reveal"><span class="mi">01</span><b>Infrastructure that stays up under load,</b><p>and a desk that watches it.</p></div>
-      <div class="mcard reveal"><span class="mi">02</span><b>Web and app surfaces we ship ourselves —</b><p>web, mail, identity, edges.</p></div>
-      <div class="mcard reveal"><span class="mi">03</span><b>Then we attack our own work under a signed scope.</b><p>Findings in a file.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="programmes" class="prog">
-  <div class="wrap">
-    <div class="sec-h"><small>01 /</small><h2>THE SEVEN</h2><p>Signed scope only. No methods on a public page.</p></div>
-    <div class="cards" id="cards"></div>
-  </div>
-</section>
-
-<section id="surfaces" class="surf">
-  <div class="wrap">
-    <div class="sec-h"><small>02 /</small><h2>THE SURFACES</h2><p>If it is reachable on the public net, it is in the conversation. The list is the internet, not a brochure of three products.</p></div>
-    <ul class="chips" id="chips"></ul>
-  </div>
-</section>
-
-<section id="house" class="house">
-  <div class="wrap">
-    <div class="lab">
-      <div class="lab-txt">
-        <small>03 /</small>
-        <h2 class="disp sm">THE HOUSE</h2>
-        <p>The house is here. Book if it can wait. Call if it cannot. Every engagement opens on a signed scope and closes on a written file.</p>
-        <div class="doors">
-          <a class="btn solid" id="book2" href="#">Book the desk</a>
-          <a class="btn glass" href="mailto:dilhamjafferr@gmail.com?subject=ZCC%20signal">Signal the desk</a>
+      <div class="row">
+        <a class="brand l t" style="--x:68;--y:47" href="#">
+          <span class="mark"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18.4" stroke="#0d1b30" stroke-width="1.4"/><path d="M22 8 12 22h6l-1 10 10-14h-6z" fill="#0d1b30"/></svg></span>
+          <b class="sx" style="--sx:0.894">ZCC</b>
+        </a>
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><i></i><i></i></button>
+        <div class="menu" id="site-menu">
+          <nav class="nav" aria-label="Primary">
+            <i class="n-home"><svg viewBox="0 0 20 21" fill="none"><path d="M2 8.4 10 2l8 6.4V18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" stroke="#202940" stroke-width="1.7" stroke-linejoin="round"/></svg></i>
+            <span class="n-explore">Programmes</span>
+            <hr class="n-div">
+            <i class="n-grid"><svg viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="7.4" height="7.4" rx="1.7" stroke="#202940" stroke-width="1.7"/><rect x="11.6" y="1" width="7.4" height="7.4" rx="1.7" stroke="#202940" stroke-width="1.7"/><rect x="1" y="11.6" width="7.4" height="7.4" rx="1.7" stroke="#202940" stroke-width="1.7"/><rect x="11.6" y="11.6" width="7.4" height="7.4" rx="1.7" stroke="#202940" stroke-width="1.7"/></svg></i>
+            <span class="n-product">The desk</span>
+          </nav>
+          <a class="cta" href="mailto:zeusindustries.zy@gmail.com?subject=ZCC%20appointment">
+            <span>Book the desk</span>
+            <span class="knob"><svg viewBox="0 0 18 18" fill="none"><path d="m6.6 3.6 6 5.4-6 5.4" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
         </div>
       </div>
-      <div class="gen" aria-hidden="true">
-        <i class="ring r1"></i><i class="ring r2"></i><i class="ring r3"></i>
-        <span class="core"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg></span>
+
+      <div class="hero-blk">
+        <p class="eyebrow l c sx" style="--x:65.7;--y:-209.2;--sx:0.9293">Zeus Cybernetics Corp — Cyber defence, Kampala</p>
+        <h1 class="l c" style="--x:62.6;--y:-167.3">
+          <span class="sx" style="--sx:0.9431">Hold the</span><br>
+          <span class="sx" style="--sx:0.9792">Wire.</span>
+        </h1>
+        <span class="play l c" style="--x:66;--y:34" aria-hidden="true"><svg viewBox="0 0 13 14" fill="none"><path d="M1.4 1.3 11.6 7 1.4 12.7z" fill="#0b1526"/></svg></span>
+        <span class="tag l c sx" style="--x:131;--y:48.7;--sx:0.8973">Kampala · Est. 1998 · Signed scope only</span>
+        <aside class="panel l c r" style="--x:58;--y:-165" aria-label="The seven programmes">
+          <span class="p-title">The Seven</span>
+          <span class="dot"></span>
+          <span class="shield"><svg viewBox="0 0 30 39" fill="none" aria-hidden="true"><path d="M15 1.2 1.6 6.6v13.1c0 6.6 5.1 12.6 13.4 17.9 8.3-5.3 13.4-11.3 13.4-17.9V6.6z" stroke="#101c33" stroke-width="2" stroke-linejoin="round"/><path d="M2.1 18.9c4.6-1.1 8.9-1.6 12.9-1.6s8.3.5 12.9 1.6" stroke="#101c33" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <span class="p-row" style="top:calc(70*var(--u))"><u>01</u> Data Protection</span>
+          <span class="p-row" style="top:calc(98*var(--u))"><u>02</u> Simulation</span>
+          <span class="p-row" style="top:calc(126*var(--u))"><u>03</u> Authorised Testing</span>
+          <span class="p-row" style="top:calc(154*var(--u))"><u>04</u> Debug</span>
+          <span class="p-row" style="top:calc(182*var(--u))"><u>05</u> Threat Analysis</span>
+          <span class="p-row" style="top:calc(210*var(--u))"><u>06</u> Intelligence</span>
+          <span class="p-row" style="top:calc(238*var(--u))"><u>07</u> Digital Infrastructure</span>
+        </aside>
       </div>
+
+      <div class="row">
+        <div class="stats">
+          <span class="num l b sx" style="--x:64;--y:60.4;--sx:1">1998</span>
+          <span class="lbl l b sx" style="--x:295;--y:73.2;--sx:0.9634">Established<br>Kampala<br>Uganda</span>
+          <span class="slash l b" style="--x:418;--y:76" aria-hidden="true"></span>
+          <span class="num l b sx" style="--x:480;--y:60.4;--sx:0.9858">07</span>
+          <span class="lbl l b sx" style="--x:716;--y:96.7;--sx:0.9209">Programmes<br>Signed scope</span>
+        </div>
+        <a class="meet l b r" style="--x:59;--y:66" href="mailto:dilhamjafferr@gmail.com?subject=ZCC%20signal">
+          <span class="thumb"><img alt="" style="object-position:60% 50%" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_105822_bf7c2d53-9957-4521-bbbf-7c1ab7a70130.png"></span>
+          <b>Meet ZCC</b>
+          <span class="knob"><svg viewBox="0 0 18 18" fill="none"><path d="m6.6 3.6 6 5.4-6 5.4" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <span class="sig">© Zeus Cybernetics Corp (ZCC) · EST. 1998 · KAMPALA — Digital architecture by Zeus Cybernetics Corp (ZCC)</span>
+      </div>
+
     </div>
   </div>
-</section>
+</div>
 
-</main>
+<script>
+(function(){
+  var d=document.documentElement; if(!d.classList.contains('pre'))return;
+  var EXPO='cubic-bezier(.16,1,.3,1)', SOFT='cubic-bezier(.22,.7,.25,1)', GLASS='cubic-bezier(.2,.75,.28,1)';
+  var s = matchMedia('(max-width: 640px)').matches ? .86 : 1, running=[];
+  function q(sel){return document.querySelector(sel)}
+  function qa(sel){return document.querySelectorAll(sel)}
+  function animate(el,kf,dur,delay,ease){ if(!el||!el.animate) return;
+    running.push(el.animate(kf,{duration:dur*s,delay:delay*s,easing:ease,fill:'both'})); }
+  function lift(sel,delay,dist,dur){ var el=q(sel); if(!el)return;
+    animate(el,[{opacity:0,transform:'translateY('+(dist||'.7em')+')'},{opacity:1,transform:'translateY(0)'}],dur||560,delay,SOFT); }
+  function settle(sel,delay,dur,from,dist){ var el=q(sel); if(!el)return;
+    animate(el,[{opacity:0,transform:'translateY('+(dist||'1.1em')+') scale('+(from||.985)+')'},{opacity:1,transform:'translateY(0) scale(1)'}],dur||760,delay,GLASS); }
+  function rise(el,delay,dur){ if(!el)return;
+    animate(el,[{clipPath:'inset(100% 0 -14% 0)',transform:'translateY(.16em)'},{clipPath:'inset(-18% 0 -14% 0)',transform:'translateY(0)'}],dur,delay,EXPO); }
+  var h1=qa('h1 .sx'), nums=qa('.num'), lbls=qa('.lbl');
+  lift('.brand',60,'.55em',600); settle('.nav',150,700,.99,'.5em'); settle('.cta',200,700,.985,'.5em'); settle('.burger',150,700,.9,'.4em');
+  lift('.eyebrow',300,'.8em',520);
+  rise(h1[0],380,980); rise(h1[1],470,980);
+  settle('.play',720,640,.88,'.3em'); lift('.tag',770,'.7em',560); settle('.panel',800,880,.982,'1.4em');
+  animate(q('.shield'),[{transform:'scale(.86)'},{transform:'scale(1)'}],700,1020,EXPO);
+  animate(q('.dot'),[{transform:'scale(0)'},{transform:'scale(1)'}],520,1080,EXPO);
+  qa('.p-row').forEach(function(r,i){ liftSel(r,860+i*70); });
+  rise(nums[0],920,860); rise(nums[1],990,860);
+  liftSel(lbls[0],1030); liftSel(lbls[1],1075);
+  animate(q('.slash'),[{transform:'scaleY(0)'},{transform:'scaleY(1)'}],700,1010,EXPO);
+  settle('.meet',1140,820,.985,'1.2em');
+  function liftSel(el,delay){ if(!el)return; animate(el,[{opacity:0,transform:'translateY(.55em)'},{opacity:1,transform:'translateY(0)'}],520,delay,SOFT); }
+  Promise.all(running.map(function(a){return a.finished.catch(function(){})})).then(function(){
+    d.classList.remove('pre'); running.forEach(function(a){a.cancel()}); running=[];
+  });
+})();
 
-<footer>
-  <div class="wrap fgrid">
-    <div class="fcol fbrand">
-      <a class="brand" href="#top"><span class="zap"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span><span class="bt"><b>ZCC</b><em>EST. 1998 · KAMPALA</em></span></a>
-      <p>Kampala cybersecurity house. We hold the wire, build the door, and test the lock we fitted.</p>
-      <div class="soc"><a href="#house" aria-label="Book"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none"/><path d="M4 7l8 6 8-6"/></svg></a><a href="tel:+256730078031" aria-label="Call"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-3 2a12 12 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></svg></a><a href="#surfaces" aria-label="Web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18" fill="none"/></svg></a></div>
-    </div>
-    <div class="fcol">
-      <h4>Protocol</h4>
-      <a href="#mandate">Mandate</a><a href="#programmes">The Seven</a><a href="#surfaces">Surfaces</a><a href="#house">The house</a>
-    </div>
-    <div class="fcol">
-      <h4>Frequency</h4>
-      <p>Leave a signal. The desk writes back.</p>
-      <form class="freq" id="freq">
-        <input type="email" id="femail" placeholder="you@company.com" aria-label="Email" required>
-        <button type="submit" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-      </form>
-    </div>
-    <div class="fcol">
-      <h4>Direct</h4>
-      <a href="mailto:zeusindustries.zy@gmail.com">zeusindustries.zy@gmail.com</a>
-      <a href="mailto:dilhamjafferr@gmail.com">dilhamjafferr@gmail.com</a>
-      <a href="tel:+256730078031">+256 730 078031</a>
-    </div>
-  </div>
-  <div class="wrap fbot">
-    <span>© <span id="yr"></span> ZEUS CYBERNETICS CORP · KAMPALA · SG · UGANDA · EST. 1998</span>
-    <span class="sig" id="sig">Digital architecture by Zeus Cybernetics Corp (ZCC)</span>
-  </div>
-</footer>
+(function(){
+  var btn=document.querySelector('.burger'), menu=document.getElementById('site-menu'); if(!btn||!menu)return;
+  function open(v){ btn.setAttribute('aria-expanded',v?'true':'false'); btn.setAttribute('aria-label',v?'Close menu':'Open menu'); if(v)menu.setAttribute('data-open','');else menu.removeAttribute('data-open'); }
+  btn.addEventListener('click',function(e){ e.stopPropagation(); open(btn.getAttribute('aria-expanded')!=='true'); });
+  menu.addEventListener('click',function(e){ if(e.target.closest('a')) open(false); });
+  document.addEventListener('click',function(e){ if(!menu.contains(e.target)&&e.target!==btn) open(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ open(false); btn.focus(); } });
+  matchMedia('(min-aspect-ratio: 1/1)').addEventListener('change',function(m){ if(m.matches) open(false); });
+})();
 
-<script src="vendor/three.min.js"></script>
-<script src="app.js"></script>
+(function(){
+  var v=document.querySelector('video.bg'); if(!v) return;
+  var q=matchMedia('(prefers-reduced-motion: reduce)');
+  var sync=function(){ if(q.matches){v.pause(); v.currentTime=0;} else v.play().catch(function(){}); };
+  q.addEventListener('change',sync);
+  document.addEventListener('visibilitychange',function(){ if(!document.hidden) sync(); });
+  v.addEventListener('canplay',sync); sync();
+})();
+</script>
 </body>
 </html>
