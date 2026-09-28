@@ -24,19 +24,7 @@ jobs:
           node-version: '22'
           cache: 'npm'
       - run: npm ci
-      - name: Type check
-        run: npx tsc --noEmit
-      - name: Vite build
-        run: |
-          set +e
-          npx vite build >vite.log 2>&1
-          CODE=$?
-          set -e
-          if [ "$CODE" -ne 0 ]; then
-            MSG=$(tail -c 1800 vite.log | tr '\n' '|' | tr -d '\r' | sed 's/::/-/g; s/\r//g')
-            echo "::error::VITE_BUILD_FAIL exit=$CODE :: $MSG"
-            exit $CODE
-          fi
+      - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
